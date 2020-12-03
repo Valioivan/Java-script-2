@@ -1,0 +1,41 @@
+
+/********************************************************************************************************************  Coding Challenge #1 SECTION 5*/
+/**Given an array of forecasted maximum temperatures. given thermomemter displays a string with these temperatures.
+ *
+ * Example: [17, 21, 23] will print " ... 17 degress in 1 days ... 21 degrees in 2 days ... 23 degrees in 3 days..."
+ *
+ * create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+ *
+ * Use problme solving framework: Understanf the problem and break it up into sub-problems!
+ *
+ * TEST DATA 1: [17, 21, 23]
+ * TEST DATA 2: [12,5,-5,0,4,]
+ */
+
+// 1) Understanding a problem
+// array transformed to string, separated by...
+// what is the x days: index + 1
+
+// 2) Breaking into sub problems
+// Transform array into a string
+// transform each element to string with celzius
+// string needs to sontain day (index + 1 )
+// Ad... between elements and start and end of string
+// Log string to the console
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+const data3 = [12, 5, -5, 0, 4, 20, -7, -8, -9];
+//... 17 degress in 1 days ... 21 degrees in 2 days ... 23 degrees in 3 days..."
+
+const printForecast = function (arr) {
+  let str = ``; // transform array into a string
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i] + 0} degrees celsius in ${i + 1} days ...`;
+  }
+  console.log(`...` + str);
+};
+
+printForecast(data1);
+printForecast(data2);
+printForecast(data3);
